@@ -259,7 +259,7 @@ export default function Home() {
     />
   </motion.div>
   
-  <h3 className="text-xl font-semibold mb-2">Medical AI Chatbot</h3>
+  <h3 className="text-xl font-semibold mb-2 text-black">Medical AI Chatbot</h3>
   
   <motion.p 
     className="text-gray-600 mb-4"
@@ -272,9 +272,16 @@ export default function Home() {
     <motion.a
       href="https://github.com/ahmed-mhadhbi/medical-ai-app"
       target="_blank"
+      
       rel="noopener noreferrer"
-      whileHover={{ scale: 1.05 }}
-      className="text-sm px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors"
+      
+      whileHover={{ 
+    scale: 1.05,
+    backgroundColor: "#4B5563", // Gray-600
+    color: "white"
+  }}
+        className="text-sm px-4 py-2 bg-gray-700 text-white hover:bg-gray-800 rounded-md transition-colors"
+
     >
       Code
     </motion.a>
@@ -341,19 +348,25 @@ export default function Home() {
                 onClick={() => window.open("/d.png", "_blank")}
               />
             </motion.div>
-            <h3 className="text-xl font-semibold mb-2">Affar E-commerce</h3>
+            <h3 className="text-xl font-semibold mb-2 text-black">Affar E-commerce</h3>
             <p className="text-gray-600 mb-4">
               A React-based e-commerce platform with product listings, cart functionality, and secure checkout.
             </p>
             <div className="flex space-x-3">
-              <a
+              <motion.a
                 href="https://github.com/ahmed-mhadhbi/Affar.git"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors"
+                whileHover={{ 
+    scale: 1.05,
+    backgroundColor: "#4B5563", // Gray-600
+    color: "white"
+  }}
+                  className="text-sm px-4 py-2 bg-gray-700 text-white hover:bg-gray-800 rounded-md transition-colors"
+
               >
                 Code
-              </a>
+              </motion.a>
             </div>
           </motion.div>
 
@@ -406,7 +419,7 @@ export default function Home() {
     />
   </motion.div>
   
-  <h3 className="text-xl font-semibold mb-2">Gaming Website </h3>
+  <h3 className="text-xl font-semibold mb-2 text-black">Gaming Website </h3>
   
   <motion.p 
     className="text-gray-600 mb-4"
@@ -420,8 +433,13 @@ export default function Home() {
       href="https://github.com/ahmed-mhadhbi/GameFy"
       target="_blank"
       rel="noopener noreferrer"
-      whileHover={{ scale: 1.05 }}
-      className="text-sm px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors"
+      whileHover={{ 
+    scale: 1.05,
+    backgroundColor: "#4B5563", // Gray-600
+    color: "white"
+  }}
+        className="text-sm px-4 py-2 bg-gray-700 text-white hover:bg-gray-800 rounded-md transition-colors"
+
     >
       Code
     </motion.a>
@@ -475,13 +493,17 @@ export default function Home() {
     transition={{ 
       delay: index * 0.1,
       type: "spring",
-      stiffness: 100,
-      damping: 10
+      stiffness: 400, // Increased from 100
+      damping: 20    // Increased from 10
     }}
     whileHover={{ 
       scale: 1.1,
       backgroundColor: '#3B82F6',
-      color: 'white'
+      color: 'white',
+      transition: {
+        duration: 0.2, // Quick transition
+        type: "tween"  // Linear transition instead of spring
+      }
     }}
     className="px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full shadow-sm border border-gray-200 text-gray-700 hover:shadow-md transition-all cursor-default"
   >
