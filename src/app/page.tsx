@@ -1,10 +1,11 @@
 'use client';
 
 import { motion } from "framer-motion";
-import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim";
+import { Particles } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 import { useCallback } from "react";
-import { Engine } from "tsparticles-engine";
+import { Engine } from "@tsparticles/engine";
+import Image from 'next/image';666666
 
 // Animation variants
 const fadeInUp = {
@@ -68,7 +69,8 @@ export default function Home() {
       {/* Animated Particle Background */}
       <Particles
         id="tsparticles"
-        init={particlesInit}
+        
+        
         options={{
           fpsLimit: 120,
           interactivity: {
@@ -171,7 +173,7 @@ export default function Home() {
     backgroundSize: '200% auto'
   }}
 >
-  Hi, I'm Ahmed Mhadhbi
+  Hi, I&apos;m Ahmed Mhadhbi
 </motion.h1>
         <motion.p
           variants={fadeInUp}
@@ -245,15 +247,19 @@ export default function Home() {
     whileHover={{ scale: 1.02 }}
     className="flex space-x-4 mb-4 overflow-hidden"
   >
-    <img
+    <Image
       src="/a.png"
       alt="Medical AI Chatbot"
+      width={300}
+      height={200}
       className="w-1/2 rounded-lg object-cover h-40 cursor-pointer hover:scale-105 transition-transform"
       onClick={() => window.open("/a.png", "_blank")}
     />
-    <img
+    <Image
       src="/b.png"
       alt="Medical AI Chatbot"
+      width={300}
+      height={200}
       className="w-1/2 rounded-lg object-cover h-40 cursor-pointer hover:scale-105 transition-transform"
       onClick={() => window.open("/b.png", "_blank")}
     />
@@ -335,15 +341,19 @@ export default function Home() {
     whileHover={{ scale: 1.02 }}
     className="flex space-x-4 mb-4 overflow-hidden"
   >
-              <img
+              <Image
                 src="/c.png"
                 alt="Affar E-commerce"
+                width={300}
+                height={200}
                 className="w-1/2 rounded-lg object-cover h-40 cursor-pointer hover:scale-105 transition-transform"
                 onClick={() => window.open("/c.png", "_blank")}
               />
-              <img
+              <Image
                 src="/d.png"
                 alt="Affar E-commerce"
+                width={300}
+                height={200}
                 className="w-1/2 rounded-lg object-cover h-40 cursor-pointer hover:scale-105 transition-transform"
                 onClick={() => window.open("/d.png", "_blank")}
               />
@@ -405,15 +415,19 @@ export default function Home() {
     whileHover={{ scale: 1.02 }}
     className="flex space-x-4 mb-4 overflow-hidden"
   >
-    <img
+    <Image
       src="/e.png"
-      alt="Medical AI Chatbot"
+      alt="Gaming Website"
+      width={300}
+      height={200}
       className="w-1/2 rounded-lg object-cover h-40 cursor-pointer hover:scale-105 transition-transform"
       onClick={() => window.open("/e.png", "_blank")}
     />
-    <img
+    <Image
       src="/f.png"
-      alt="Medical AI Chatbot"
+      alt="Gaming Website"
+      width={300}
+      height={200}
       className="w-1/2 rounded-lg object-cover h-40 cursor-pointer hover:scale-105 transition-transform"
       onClick={() => window.open("/f.png", "_blank")}
     />
@@ -425,7 +439,7 @@ export default function Home() {
     className="text-gray-600 mb-4"
     whileHover={{ x: 5 }} // Slight hover movement
   >
-    Gamefy is a gaming website that allows users to be updated with all the news.It have more than 750000 game in its DB. It features a user-friendly interface,
+    Gamefy is a gaming website that allows users to be updated with all the news. It has more than 750,000 games in its DB. It features a user-friendly interface,
   </motion.p>
   
   <div className="flex space-x-3">
@@ -522,7 +536,7 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           className="text-3xl font-bold text-gray-800 mb-6"
         >
-          Let's Connect!
+          Let&apos;s Connect!
         </motion.h2>
         <motion.div
           initial="hidden"
